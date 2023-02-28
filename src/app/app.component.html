@@ -1,0 +1,27 @@
+<div class="home">
+
+  <div class="box">
+    <div class="temp"></div>
+<app-temperature-top [active]="active"   [room]="room" (start)="dropDown($event)" ></app-temperature-top>
+<app-power></app-power>
+<app-users-right></app-users-right>
+
+ <div  [class.active]="active" class="box__temperature-list">
+  <li  [class.active]="isSelected === item"   (click)="check(item)" *ngFor="let item of items" class="box__temperature-list__items">{{item.item}}</li>
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
