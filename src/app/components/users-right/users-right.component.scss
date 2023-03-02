@@ -11,7 +11,7 @@
   grid-template-rows: 0.63fr 1fr 0.6fr 1.5fr;
   &__user {
     display: grid;
-    grid-template-columns: 1fr 0.3fr;
+    grid-template-columns: 1fr 0.6fr;
 
     &__left {
       display: flex;
@@ -112,6 +112,7 @@
         p {
           color: black;
           text-transform: capitalize;
+          font-size: 1.5rem;
           margin-right: 1rem;
         }
       }
@@ -188,13 +189,13 @@
           visibility: visible;
         }
         p {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           font-weight: bolder;
           text-transform: uppercase;
         }
         &__dot {
-          width: 0.7rem;
-          height: 0.7rem;
+          width: 0.6rem;
+          height: 0.6rem;
           background-color: red;
           border-radius: 50%;
           animation: dot 1.3s linear infinite;
@@ -244,7 +245,7 @@
           }
         }
         p {
-          font-size: 2rem;
+          font-size: 1.3rem;
         }
       }
     }
@@ -265,6 +266,7 @@
         justify-content: space-around;
         p {
           text-transform: capitalize;
+          font-size: 1.5rem;
         }
       }
 
@@ -311,6 +313,7 @@
       p {
         text-transform: capitalize;
         color:black;
+        font-size: 1.5rem;
       }
     }
     &__box {
@@ -319,10 +322,12 @@
       height: 100%;
 
       &__list {
-        width: 50%;
+        width: 70%;
+
         display: flex;
         align-items: center;
         color:black;
+        font-size: 1.5rem;
         i {
           margin-left: 1.1rem;
           margin-right: 3rem;
