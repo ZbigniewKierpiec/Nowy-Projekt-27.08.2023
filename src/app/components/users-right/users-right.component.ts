@@ -3,6 +3,10 @@ import { Model } from '../users-right/model';
 import { Models } from '../users-right/models';
 import { Camera } from './cameras/camera';
 import { Cameras } from './cameras/cameras';
+import { Preset } from './presets/preset';
+import { Presets } from './presets/presets';
+import { Room } from './presets/room';
+import { Rooms } from './presets/rooms';
 
 @Component({
   selector: 'app-users-right',
@@ -14,12 +18,16 @@ export class UsersRightComponent implements OnInit {
   users: Model[] = Models;
   userName: string = 'John';
   userImage: string = 'assets/user.jpeg';
-  cameraT:boolean=false;
-  cameras:Camera[]=Cameras;
-  cameraActive:boolean;
-  cameraImage:string='assets/garden.jpg'
-  cameraName:string='garden';
-  dotActive:boolean=true;
+  cameraT: boolean = false;
+  cameras: Camera[] = Cameras;
+  cameraActive: boolean;
+  cameraImage: string = 'assets/garden.jpg';
+  cameraName: string = 'garden';
+  dotActive: boolean = true;
+  isSelected: any;
+  presets: Preset[] = Presets;
+  isSelectedPresets:string;
+  rooms:Room[]=Rooms;
   constructor() {}
 
   user() {
@@ -32,31 +40,32 @@ export class UsersRightComponent implements OnInit {
     this.userImage = item.image;
   }
 
-  camera(){
-    console.log('Dziala')
-    this.cameraT =! this.cameraT;
+  camera() {
+    console.log('Dziala');
+    this.cameraT = !this.cameraT;
   }
 
-
-  cameraC(item:Camera){
-    console.log(item)
+  cameraC(item: Camera) {
+    console.log(item);
     this.cameraImage = item.image;
     this.cameraName = item.name;
     this.cameraActive = item.active;
     this.dotActive = item.active;
+    this.isSelected = item.name;
   }
 
-
-  startRecord(item:Camera){
+  startRecord(item: Camera) {
     console.log('Nagrywa');
-    item.active=true;
+    item.active = true;
   }
-  stopRecording(item:Camera){
-    item.active=false;
-
+  stopRecording(item: Camera) {
+    item.active = false;
   }
 
-  ngOnInit(): void {
+presetsClick(item:Preset){
+console.log(item.name)
+this.isSelectedPresets = item.name;
+}
 
-  }
+  ngOnInit(): void {}
 }
