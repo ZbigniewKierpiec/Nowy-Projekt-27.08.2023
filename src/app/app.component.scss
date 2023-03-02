@@ -26,12 +26,10 @@
     left: 9%;
     transition: 0.7s linear;
     cursor: pointer;
-    &.active{
+    &.active {
       transform: translateY(0px);
     }
     &__items {
-
-
       text-align: center;
       color: black;
       font-size: 2.4rem;
@@ -39,12 +37,12 @@
       background-color: white;
       border-top: 1px solid lightgray;
       text-transform: capitalize;
-      &.active{
+      &.active {
         background-color: black;
         color: white;
       }
       &:hover {
-      background-color: black;
+        background-color: black;
         color: white;
       }
     }

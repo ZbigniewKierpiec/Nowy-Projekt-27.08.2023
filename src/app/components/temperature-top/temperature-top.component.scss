@@ -113,6 +113,11 @@
           display: block;
           font-size: 3rem;
           color: #c0bad1;
+          &.active{
+
+
+
+          }
         }
       }
     }
@@ -122,10 +127,7 @@
 .temp {
   width: 7rem;
   height: 5rem;
-  // position: absolute;
-  // right: 20%;
-  // top: 50%;
-  // transform: translateY(-50%);
+ 
   border: none;
   outline: none;
   display: flex;
@@ -202,3 +204,4 @@ select.classic:focus {
 
   outline: 0;
 }
+

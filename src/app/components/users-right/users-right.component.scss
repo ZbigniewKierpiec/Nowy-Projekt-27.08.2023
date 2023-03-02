@@ -109,14 +109,17 @@
       cursor: pointer;
 
       &__left {
+
         p {
-          color: black;
+          color: #93BFCF;
+          color: var(--right-box-color);
           text-transform: capitalize;
           font-size: 1.5rem;
           margin-right: 1rem;
         }
       }
       &__right {
+        color: var(--right-box-color);
       }
     }
     &__tv {
@@ -264,9 +267,13 @@
 
         display: flex;
         justify-content: space-around;
+        &__arrow{
+          color: var(--right-box-color);
+        }
         p {
           text-transform: capitalize;
           font-size: 1.5rem;
+          color: var(--right-box-color);
         }
       }
 
@@ -289,6 +296,10 @@
           color: rgb(101, 102, 105);
           cursor: pointer;
           transition: 0.2s linear;
+          -webkit-box-shadow: 6px 2px 26px -4px rgba(0,0,0,0.19);
+          -moz-box-shadow: 6px 2px 26px -4px rgba(0,0,0,0.19);
+          box-shadow: 6px 2px 26px -4px rgba(0,0,0,0.19);
+
           &.active {
             background-color: #93bfcf;
             color: white;
@@ -306,13 +317,13 @@
       display: flex;
       width: 30%;
       height: 30px;
-      color:rgb(220,220,220);
+      color:var(--right-box-color);
       display: flex;
       justify-content: space-around;
       align-items: center;
       p {
         text-transform: capitalize;
-        color:black;
+        color:var(--right-box-color);
         font-size: 1.5rem;
       }
     }
@@ -326,11 +337,14 @@
 
         display: flex;
         align-items: center;
-        color:black;
+        color:var(--right-box-color);
+        font-weight: bolder;
         font-size: 1.5rem;
+        text-transform: capitalize;
         i {
           margin-left: 1.1rem;
           margin-right: 3rem;
+          color:var(--right-box-color) ;
         }
       }
     }
