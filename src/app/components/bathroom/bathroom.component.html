@@ -1,0 +1,87 @@
+<div [ngClass]="active" class="box">
+  <div class="box__bath">
+    <div class="box__bath__left">
+      <div class="box__bath__left__top">
+        <div class="box__bath__left__top__title">
+          <p>shower presets</p>
+          <p>+Add presets</p>
+        </div>
+        <div class="box__bath__left__top__box">
+          <div
+            *ngFor="let item of shower"
+            class="box__bath__left__top__box__morning"
+          >
+            <div class="box__bath__left__top__box__morning__left">
+              <i class="{{ item.icon }}"></i>
+              <p>{{ item.name }}</p>
+            </div>
+            <div class="box__bath__left__top__box__morning__right">
+              <p>{{ item.temp }}&#8451;</p>
+              <p>{{ item.pro }}%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box__bath__left__bottom">
+        <div class="box__bath__left__bottom__title">
+          <p>weather</p>
+
+        </div>
+        <div class="box__bath__left__bottom__box">
+
+          <div class="box__bath__left__bottom__box__left">
+            <div class="box__bath__left__bottom__box__left__top">
+              <p>25&#8451;</p> <span>19&#176;</span>
+            </div>
+            <div class="box__bath__left__bottom__box__left__bottom">
+              <p>saturday,</p> <p> 04 March</p>
+            </div>
+          </div>
+
+          <div class="box__bath__left__bottom__box__right">
+            <i class="fa-regular fa-sun"></i>
+            <p>sunny</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="box__bath__middle">
+      <div class="box__bath__middle__top">
+        <div class="box__bath__middle__top__one">
+          <div class="box__bath__middle__top__one__left"></div>
+          <div class="box__bath__middle__top__one__right">
+            <div class="box__bath__middle__top__one__right__top">
+              <div class="box__bath__middle__top__one__right__top__left">
+                <div class="box__bath__middle__top__one__right__top__left__btn">
+                  <button>All On</button>
+                </div>
+                <div class="box__bath__middle__top__one__right__top__left__btn">
+
+                  <button>All off</button>
+
+
+                </div>
+              </div>
+              <div class="box__bath__middle__top__one__right__top__right">
+                <div class="box__bath__middle__top__one__right__top__right__btn">
+                  <button>All off</button>
+                </div>
+                <div class="box__bath__middle__top__one__right__top__right__btn">
+                  <button>All off</button>
+                </div>
+              </div>
+            </div>
+            <div class="box__bath__middle__top__one__right__bottom"></div>
+          </div>
+        </div>
+        <div class="box__bath__middle__top__two"></div>
+        <div class="box__bath__middle__top__three"></div>
+      </div>
+
+    </div>
+    <div class="box__bath__right"></div>
+  </div>
+</div>

@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   active: boolean;
   room: string = 'Living Room';
   isSelected;
-  panelSelected:string;
+  panelSelected: string;
   dropDown(event: any) {
     console.log(event);
     this.active = event;
@@ -33,18 +33,17 @@ export class AppComponent implements OnInit {
     this.active = false;
 
     this.isSelected = item;
+    console.log(this.room)
   }
 
+  panel(event) {
+    console.log(event);
+    this.panelSelected = event;
+  }
 
-panel(event){
-console.log(event)
-this.panelSelected = event;
-}
-
-checkPanelType(item){
- console.log(item)
-}
-
+  checkPanelType(item) {
+    console.log(item);
+  }
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.

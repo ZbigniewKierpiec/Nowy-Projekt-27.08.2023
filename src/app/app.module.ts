@@ -9,10 +9,13 @@ import { UsersRightComponent } from './components/users-right/users-right.compon
 import { DevicesComponent } from './components/devices/devices.component';
 import { TvComponent } from './components/tv/tv.component';
 import { SkyComponent } from './components/sky/sky.component';
+import { BathroomComponent } from './components/bathroom/bathroom.component';
+
+
 
 
 @NgModule({
-  declarations: [AppComponent, PowerComponent, TemperatureTopComponent, UsersRightComponent, DevicesComponent, TvComponent, SkyComponent],
+  declarations: [AppComponent, PowerComponent, TemperatureTopComponent, UsersRightComponent, DevicesComponent, TvComponent, SkyComponent, BathroomComponent],
   imports: [BrowserModule, BrowserAnimationsModule,FormsModule],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
