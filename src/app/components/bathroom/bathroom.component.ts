@@ -11,6 +11,19 @@ export class BathroomComponent implements OnInit {
  @Input() active:string;
 
   shower:Shower[]=Showers;
+  isActive?;
+
+
+
+activeItem(item:Shower){
+  this.isActive = item.name;
+
+
+}
+
+
+
+
   constructor() { }
 
   ngOnInit(): void {
