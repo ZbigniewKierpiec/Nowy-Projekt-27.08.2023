@@ -67,6 +67,17 @@ export class BathroomComponent implements OnInit {
     }
   }
 
+
+  setMore(){
+    this.more1 =true;
+    console.log('dziala')
+  }
+
+
+  test(){
+this.more1 = false;
+
+  }
   constructor() {}
 
   ngOnInit(): void {}

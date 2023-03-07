@@ -1,7 +1,8 @@
 .box {
-  position: absolute;
+  position: absolute !important;
   padding: 5rem;
   top: 50%;
+  z-index: 7;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
@@ -13,13 +14,14 @@
   // background: -moz-linear-gradient(top, #9e9ea3, #5C5B61);
   background: linear-gradient(to bottom, #868688, #35343b);
 
+ transition: all 0.4s linear;
 
 
 
-  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
+
   &__items {
     width: 60%;
     height: 90%;

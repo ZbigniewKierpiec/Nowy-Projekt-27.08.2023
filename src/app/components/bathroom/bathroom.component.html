@@ -1,5 +1,5 @@
 <div [ngClass]="active" class="box">
-  <app-more1 *ngIf="more1"   ></app-more1>
+  <app-more1  *ngIf="more1" (switch)="test()"></app-more1>
   <div class="box__bath">
 
     <div class="box__bath__left">
@@ -107,7 +107,7 @@
                 class="box__bath__middle__top__one__right__bottom__left"
               ></div>
               <div class="box__bath__middle__top__one__right__bottom__right">
-                <button>
+                <button  (click)="setMore()"   >
                   more <i class="fa-sharp fa-solid fa-caret-down"></i>
                 </button>
               </div>
@@ -217,7 +217,7 @@
               ></div>
               <div class="box__bath__middle__top__two__right__bottom__right">
                 <button>
-                  more <i class="fa-sharp fa-solid fa-caret-down"></i>
+                  more  <i class="fa-sharp fa-solid fa-caret-down"></i>
                 </button>
               </div>
             </div>
