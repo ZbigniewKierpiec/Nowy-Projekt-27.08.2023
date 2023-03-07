@@ -7,6 +7,11 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.7fr 2fr 0.7fr;
+  /* Created with https://www.css-gradient.com */
+background: #ECECF1;
+background: -webkit-linear-gradient(top, #ECECF1, #5C5B61);
+background: -moz-linear-gradient(top, #ECECF1, #5C5B61);
+background: linear-gradient(to bottom, #ECECF1, #5C5B61);
   .panel-top {
 
     display: flex;
@@ -43,6 +48,7 @@
       cursor: pointer;
       i{
         color: #c0bad1;
+        color: white;
         &.active{
           color: black;
         }
