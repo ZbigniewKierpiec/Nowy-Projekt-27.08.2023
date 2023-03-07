@@ -16,6 +16,7 @@ export class BathroomComponent implements OnInit {
   isOn? = false;
   temperature: number = 16;
   pressure: number = 50;
+  more1:boolean=false;
 
   activeItem(item: Shower) {
     this.isActive = item.name;

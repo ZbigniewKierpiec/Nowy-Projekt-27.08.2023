@@ -10,12 +10,13 @@
   align-items: center;
   z-index: 1;
   &__bath {
+    position: relative;
     width: 80%;
     height: 80%;
     background-color: grey;
     background-color: white;
     padding: 2rem;
-    z-index: 99999999999999999999999999999999999999999999999999999999999999999999;
+    z-index:2;
     display: grid;
 
     grid-template-columns: 1.3fr 1.9fr 0.4fr;
