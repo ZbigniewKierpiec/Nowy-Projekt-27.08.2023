@@ -145,6 +145,8 @@
               display: flex;
               justify-content: center;
               align-items: center;
+
+
               p {
                 font-size: 1rem;
                 text-transform: capitalize;
@@ -215,6 +217,13 @@
               color: white;
               display: grid;
               place-items: center;
+              cursor: pointer;
+
+              &:active {
+                background-color: #a89797;
+
+              }
+
             }
             &__bottom {
               background-color: #c9c3c3;
@@ -225,6 +234,12 @@
               color: white;
               display: grid;
               place-items: center;
+              cursor: pointer;
+
+              &:active {
+                background-color: #a89797;
+
+              }
             }
           }
           &__right {
@@ -264,6 +279,9 @@
                     border-bottom-right-radius: 10px;
 
                     text-transform: uppercase;
+
+
+
                   }
                 }
               }
@@ -302,7 +320,9 @@
               grid-template-columns: 1fr 1.3fr;
               grid-template-rows: 1fr;
               grid-column-gap: 1rem;
+
               &__left {
+
               }
               &__right {
                 display: flex;
@@ -366,8 +386,10 @@
               display: grid;
               place-items: center;
               transition: all 0.3s linear;
+
               &:active {
                 background-color: #a89797;
+
               }
             }
           }
