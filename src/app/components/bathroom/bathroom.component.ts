@@ -17,6 +17,7 @@ export class BathroomComponent implements OnInit {
   temperature: number = 16;
   pressure: number = 50;
   more1:boolean=false;
+  more2:boolean=false;
 
   activeItem(item: Shower) {
     this.isActive = item.name;
@@ -72,11 +73,17 @@ export class BathroomComponent implements OnInit {
     this.more1 =true;
     console.log('dziala')
   }
+  setMore2(){
+    this.more2 = true;
+  }
 
 
   test(){
 this.more1 = false;
 
+  }
+  test2(){
+    this.more2 = false;
   }
   constructor() {}
 
