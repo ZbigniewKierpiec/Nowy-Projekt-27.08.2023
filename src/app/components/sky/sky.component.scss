@@ -397,6 +397,7 @@
           align-items: flex-end;
           color: white;
           font-size: 5rem;
+          cursor: pointer;
         }
       }
       &__middle {
@@ -446,7 +447,7 @@
         place-content: center;
         grid-template-columns: 0.7fr;
         grid-template-rows: 0.6fr;
-      
+
         &__item {
           //  height: 90%;
           //  width: 90%;

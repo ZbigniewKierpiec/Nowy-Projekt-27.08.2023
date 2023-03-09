@@ -89,7 +89,9 @@ export class BathroomComponent implements OnInit {
   checkSky(event: boolean) {
     this.skyActive = event;
   }
-
+  checkApple(event:boolean){
+      this.appleActive = event;
+  }
   constructor(private device:DevicesService) {}
 
   ngOnInit(): void {
@@ -101,6 +103,7 @@ export class BathroomComponent implements OnInit {
     this.appleActive=false;
    }else if(e.name === 'apple tv' ){
             this.appleActive = true;
+            this.skyActive=false;
    }
 
    else{
