@@ -34,8 +34,8 @@
       "
       *ngIf="panelSelected == 'sky tv'"
     ></app-sky> -->
-
-    <app-bathroom [active]=" room == 'bathroom' ? 'animate__animated animate__fadeInDown' : ''" *ngIf="room === 'bathroom'"></app-bathroom>
+       <!-- <app-sky></app-sky> -->
+    <app-bathroom   [skyactive]="panelSelected"     [active]=" room == 'bathroom' ? 'animate__animated animate__fadeInDown' : ''" *ngIf="room === 'bathroom'"></app-bathroom>
     <app-bathroom></app-bathroom>
 
 

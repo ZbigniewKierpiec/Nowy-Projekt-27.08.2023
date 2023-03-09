@@ -1,4 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Icon } from './../power/model';
+import { Device } from './../devices/devices/device';
+import { Devices } from './../devices/devices/devices';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { DevicesService } from 'src/app/services/devices.service';
+
 
 @Component({
   selector: 'app-sky',
@@ -6,10 +11,27 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./sky.component.scss']
 })
 export class SkyComponent implements OnInit {
-@Input() active:string;
-  constructor() { }
+  @Output() check:EventEmitter<boolean> = new EventEmitter<boolean>();
+  skyActive:boolean= true;
+  classActive:string='zee';
+  constructor(private devices:DevicesService) { }
+
+
+
+
+
+
+
+sky(){
+  this.skyActive= false;
+  this.check.emit(this.skyActive)
+  this.devices.onDeviceActive.emit('')
+
+}
+
 
   ngOnInit(): void {
+
   }
 
 }

@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+
   &__bath {
     position: relative;
     width: 80%;
@@ -18,8 +19,8 @@
     padding: 2rem;
     z-index:2;
     display: grid;
-
-    grid-template-columns: 1.3fr 1.9fr 0.4fr;
+     grid-template-columns: 1.3fr 1.9fr 0.4fr;
+     overflow: hidden;
     &__left {
       display: grid;
 

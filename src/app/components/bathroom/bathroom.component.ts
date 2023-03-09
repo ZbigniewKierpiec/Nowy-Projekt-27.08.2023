@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DevicesService } from 'src/app/services/devices.service';
 import { Shower } from './shower';
 import { Showers } from './showers';
 
@@ -16,8 +17,10 @@ export class BathroomComponent implements OnInit {
   isOn? = false;
   temperature: number = 16;
   pressure: number = 50;
-  more1:boolean=false;
-  more2:boolean=false;
+  more1: boolean = false;
+  more2: boolean = false;
+  skyActive:boolean=false;
+  appleActive:boolean=false;
 
   activeItem(item: Shower) {
     this.isActive = item.name;
@@ -68,24 +71,39 @@ export class BathroomComponent implements OnInit {
     }
   }
 
-
-  setMore(){
-    this.more1 =true;
-    console.log('dziala')
+  setMore() {
+    this.more1 = true;
+    console.log('dziala');
   }
-  setMore2(){
+  setMore2() {
     this.more2 = true;
   }
 
-
-  test(){
-this.more1 = false;
-
+  test() {
+    this.more1 = false;
   }
-  test2(){
+  test2() {
     this.more2 = false;
   }
-  constructor() {}
 
-  ngOnInit(): void {}
+  checkSky(event: boolean) {
+    this.skyActive = event;
+  }
+
+  constructor(private device:DevicesService) {}
+
+  ngOnInit(): void {
+
+    this.device.onDevicesSend.subscribe(e=>{
+      console.log('to jest z Bath component' + e.name)
+   if(e.name == 'sky tv'){
+    this.skyActive = true;
+
+   }else{
+    this.skyActive=false;
+
+   }
+    })
+
+  }
 }

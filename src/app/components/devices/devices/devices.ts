@@ -14,9 +14,9 @@ export const Devices:Device[]=[
     icon:'/assets/Sky-Logo-1984.png'
   },
   {
-    name:'hdmi',
+    name:'apple tv',
     status:false,
-    icon:'/assets/517-5170473_png-file-svg-hdmi-icon-png-transparent-png.png'
+    icon:'/assets/apple4.png'
   },
   {
     name:'playstation',

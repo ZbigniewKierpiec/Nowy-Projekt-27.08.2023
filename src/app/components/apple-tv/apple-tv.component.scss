@@ -16,153 +16,31 @@
 
   transition: all 0.7s linear;
 
-  &__search {
-    display: grid;
-    grid-template-columns: 0.74fr;
 
-    grid-template-rows: 0.7fr;
-
-    justify-content: center;
-    align-content: center;
-
-    &__top {
-      color: white;
-      display: grid;
-
-      grid-template-columns: repeat(5, 1fr);
-      &__items {
-        background-color: rgb(197, 197, 150);
-        background-color: #c9c3c3;
-        background-color: #a19393;
-        border-right: 1px solid rgba(224, 218, 218, 0.445);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2.7rem;
-        text-transform: uppercase;
-        p {
-          font-size: 1.7rem;
-          font-weight: bolder;
-        }
-        &--dots {
-          i {
-            align-self: flex-end;
-            margin-bottom: 1rem;
-          }
-        }
-        &--first {
-          border-top-left-radius: 1.5rem;
-          border-bottom-left-radius: 1.5rem;
-        }
-        &--last {
-          border-top-right-radius: 1.5rem;
-          border-bottom-right-radius: 1.5rem;
-          border-right: none;
-        }
-      }
-    }
-  }
   &__main {
     display: grid;
-    grid-template-columns: 0.9fr 1fr;
-    grid-template-rows: 1fr 0.3fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-    &__left {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 0.3fr 1fr;
-      &__top {
-        display: grid;
-        grid-template-columns: 0.8fr;
-        grid-template-rows: 1fr;
-        justify-content: center;
-        &__item {
-          display: grid;
-          grid-template-columns: repeat(4, 5rem);
-          grid-template-rows: 5rem;
-          grid-gap: 1.2rem;
-          justify-content: center;
-          align-content: center;
-          &__items {
-            background-color: black;
-            border-radius: 1rem;
-            &--red {
-              background-color: red;
-            }
-            &--green {
-              background-color: rgb(19, 170, 19);
-            }
-            &--yellow {
-              background-color: rgb(252, 252, 31);
-            }
-            &--blue {
-              background-color: blue;
-            }
-          }
-        }
-      }
-      &__bottom {
-        display: grid;
-        grid-template-columns: 0.6fr;
-        grid-template-rows: 1fr;
-        justify-content: center;
-        &__item {
-          display: grid;
-          grid-template-columns: repeat(3, 6rem);
-          grid-template-rows: repeat(4, 6rem);
-          grid-column-gap: 1rem;
-          grid-row-gap: 0.7rem;
-          place-content: center;
-          &__items {
-            background-color: #a19393;
-            border-radius: 1rem;
-            color: whitesmoke;
-            &--two {
-              display: grid;
-              grid-template-columns: 1fr;
-              grid-template-rows: 1fr 0.7fr;
-
-              &__top {
-                display: grid;
-                justify-content: center;
-                align-content: end;
-                margin-bottom: -0.7rem;
-                font-size: 2rem;
-                font-weight: bolder;
-              }
-              &__bottom {
-                margin-top: -0.4rem;
-                display: grid;
-                justify-content: center;
-                align-content: start;
-                font-size: 1.2rem;
-                font-weight: bolder;
-              }
-            }
-            &--last {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 2rem;
-              font-weight: bolder;
-            }
-
-            &--clear {
-              visibility: hidden;
-            }
-          }
-        }
-      }
-    }
     &__right {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
+      grid-template-rows:1fr;
       justify-content: center;
 
       &__box {
+        position: absolute;
+        top:80%;
+        left: 50%;
+       transform: translate(-50% , -50%);
         display: grid;
 
+         height: 130%;
         place-content: center;
         position: relative;
         grid-template-areas:
@@ -178,8 +56,8 @@
           border-radius: 1rem;
           background-color: #a19393;
           position: absolute;
-          top: 2rem;
-          left: 5rem;
+          top: 0rem;
+          left: 30rem;
           display: grid;
           place-content: center;
           grid-template-columns: 0.5fr;
@@ -210,8 +88,8 @@
           border-radius: 1rem;
           background-color: #a19393;
           font-size: 1.8rem;
-          top: 2rem;
-          right: 5rem;
+          top: 0rem;
+          right: 30rem;
           color: whitesmoke;
           font-size: 1.8rem;
           font-weight: bolder;
@@ -378,6 +256,10 @@
       }
     }
     &__bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
       grid-row-start: 2;
       grid-row-end: 3;
       grid-column-start: 1;
@@ -404,7 +286,9 @@
         grid-template-columns: 1fr;
         grid-template-rows: 0.6fr;
         place-content: center;
-
+        position: relative;
+        bottom: 10rem;
+        left: 16.70rem;
         &__box {
           display: grid;
           grid-template-columns: repeat(6, 1fr);

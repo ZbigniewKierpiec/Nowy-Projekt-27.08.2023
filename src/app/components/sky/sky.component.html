@@ -1,4 +1,4 @@
-<div [ngClass]="active" class="box">
+<div    class="box">
   <div class="box__search">
     <div class="box__search__top">
       <div class="box__search__top__items box__search__top__items--first">
@@ -173,7 +173,7 @@
 
     </div>
     <div class="box__main__bottom">
-      <div class="box__main__bottom__left">
+      <div (click)="sky()" class="box__main__bottom__left">
         <div class="box__main__bottom__left__item">
           <i class="fa-solid fa-caret-left"></i>
         </div>
@@ -194,7 +194,9 @@
           <div class="box__main__bottom__middle__box__item">
             <i class="fa-solid fa-pause"></i>
           </div>
-          <div class="box__main__bottom__middle__box__item"></div>
+          <div class="box__main__bottom__middle__box__item">
+            <div class="box__main__bottom__middle__box__item__record"></div>
+          </div>
           <div
             class="box__main__bottom__middle__box__item box__main__bottom__middle__box__item--last"
           >

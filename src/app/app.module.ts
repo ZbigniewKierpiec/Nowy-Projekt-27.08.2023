@@ -12,12 +12,13 @@ import { SkyComponent } from './components/sky/sky.component';
 import { BathroomComponent } from './components/bathroom/bathroom.component';
 import { More1Component } from './components/more1/more1.component';
 import { More2Component } from './components/more2/more2.component';
+import { AppleTvComponent } from './components/apple-tv/apple-tv.component';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, PowerComponent, TemperatureTopComponent, UsersRightComponent, DevicesComponent, TvComponent, SkyComponent, BathroomComponent, More1Component, More2Component],
+  declarations: [AppComponent, PowerComponent, TemperatureTopComponent, UsersRightComponent, DevicesComponent, TvComponent, SkyComponent, BathroomComponent, More1Component, More2Component, AppleTvComponent],
   imports: [BrowserModule, BrowserAnimationsModule,FormsModule],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
