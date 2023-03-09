@@ -330,7 +330,8 @@
         place-content: center;
         grid-template-columns: 0.7fr;
         grid-template-rows: 0.6fr;
-
+         position: relative;
+         bottom: 0.9rem;
         &__item {
           //  height: 90%;
           //  width: 90%;

@@ -98,11 +98,19 @@ export class BathroomComponent implements OnInit {
       console.log('to jest z Bath component' + e.name)
    if(e.name == 'sky tv'){
     this.skyActive = true;
+    this.appleActive=false;
+   }else if(e.name === 'apple tv' ){
+            this.appleActive = true;
+   }
 
-   }else{
+   else{
+    this.appleActive=false;
     this.skyActive=false;
 
+
    }
+
+
     })
 
   }
