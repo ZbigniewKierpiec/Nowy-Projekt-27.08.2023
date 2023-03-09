@@ -16,7 +16,7 @@ export const Devices:Device[]=[
   {
     name:'apple tv',
     status:false,
-    icon:'/assets/apple4.png'
+    icon:'/assets/png-apple-logo-9708.png'
   },
   {
     name:'playstation',
