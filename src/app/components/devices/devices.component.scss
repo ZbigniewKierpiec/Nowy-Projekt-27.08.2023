@@ -13,6 +13,7 @@
     width: 80%;
     height: 80%;
 
+
     p {
       font-size: 1.5rem;
       color: black;
@@ -24,10 +25,12 @@
       height: 100%;
 
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(1,1fr);
 
+      grid-template-rows: 1fr;
       align-items: center;
       grid-gap: 1.7rem;
+
 
       &__item {
         height: 90%;
@@ -67,7 +70,6 @@
             &__btn {
               width: 7rem;
               height: 5rem;
-
               border: none;
               outline: none;
               display: flex;

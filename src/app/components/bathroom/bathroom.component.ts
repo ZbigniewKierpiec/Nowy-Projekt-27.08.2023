@@ -1,5 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DevicesService } from 'src/app/services/devices.service';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 import { Shower } from './shower';
 import { Showers } from './showers';
 
@@ -7,6 +14,10 @@ import { Showers } from './showers';
   selector: 'app-bathroom',
   templateUrl: './bathroom.component.html',
   styleUrls: ['./bathroom.component.scss'],
+
+
+
+
 })
 export class BathroomComponent implements OnInit {
   @Input() active: string;
@@ -19,8 +30,8 @@ export class BathroomComponent implements OnInit {
   pressure: number = 50;
   more1: boolean = false;
   more2: boolean = false;
-  skyActive:boolean=false;
-  appleActive:boolean=false;
+  skyActive: boolean = false;
+  appleActive: boolean = false;
 
   activeItem(item: Shower) {
     this.isActive = item.name;
@@ -89,32 +100,24 @@ export class BathroomComponent implements OnInit {
   checkSky(event: boolean) {
     this.skyActive = event;
   }
-  checkApple(event:boolean){
-      this.appleActive = event;
+  checkApple(event: boolean) {
+    this.appleActive = event;
   }
-  constructor(private device:DevicesService) {}
+  constructor(private device: DevicesService) {}
 
   ngOnInit(): void {
-
-    this.device.onDevicesSend.subscribe(e=>{
-      console.log('to jest z Bath component' + e.name)
-   if(e.name == 'sky tv'){
-    this.skyActive = true;
-    this.appleActive=false;
-   }else if(e.name === 'apple tv' ){
-            this.appleActive = true;
-            this.skyActive=false;
-   }
-
-   else{
-    this.appleActive=false;
-    this.skyActive=false;
-
-
-   }
-
-
-    })
-
+    this.device.onDevicesSend.subscribe((e) => {
+      console.log('to jest z Bath component' + e.name);
+      if (e.name == 'sky tv') {
+        this.skyActive = true;
+        this.appleActive = false;
+      } else if (e.name === 'apple tv') {
+        this.appleActive = true;
+        this.skyActive = false;
+      } else {
+        this.appleActive = false;
+        this.skyActive = false;
+      }
+    });
   }
 }

@@ -2,6 +2,45 @@ import { Device } from "./device";
 
 
 
+// export const Devices:Device[]=[
+//   {
+//      name:'tv',
+//      status:false,
+//      icon:'/assets/television-png-tv-29.png'
+//   },
+//   {
+//     name:'sky tv',
+//     status:false,
+//     icon:'/assets/Sky-Logo-1984.png'
+//   },
+//   {
+//     name:'apple tv',
+//     status:false,
+//     icon:'/assets/png-apple-logo-9708.png'
+//   },
+//   {
+//     name:'playstation',
+//     status:false,
+//     icon:'/assets/navy-playstation-png-logo-5.png'
+//   },
+//   {
+//     name:'radio',
+//     status:false,
+//     icon:'/assets/radio-tower-icon-5.png'
+//   },
+//   {
+//     name:'hifi',
+//     status:false,
+//     icon:'/assets/radio-tower-icon-5.png'
+//   },
+//   {
+//     name:'sound bar',
+//     status:false,
+//     icon:'/assets/radio-tower-icon-5.png'
+//   },
+// ]
+
+
 export const Devices:Device[]=[
   {
      name:'tv',
@@ -28,9 +67,16 @@ export const Devices:Device[]=[
     status:false,
     icon:'/assets/radio-tower-icon-5.png'
   },
-
-
-
-
-
+  {
+    name:'hifi',
+    status:false,
+    icon:'/assets/radio-tower-icon-5.png'
+  },
+  {
+    name:'sound bar',
+    status:false,
+    icon:'/assets/radio-tower-icon-5.png'
+  },
 ]
+
+

@@ -10,9 +10,10 @@ import { DevicesService } from 'src/app/services/devices.service';
   styleUrls: ['./sky.component.scss'],
 })
 export class SkyComponent implements OnInit {
+  @Input() active:string;
   @Output() check: EventEmitter<boolean> = new EventEmitter<boolean>();
   skyActive: boolean = true;
-  classActive: string = 'zee';
+
   constructor(private devices: DevicesService) {}
 
   sky() {
